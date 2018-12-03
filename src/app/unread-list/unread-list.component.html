@@ -4,12 +4,14 @@
     <tr>
       <th class="hidden">ID</th>
       <th>Name</th>
+      <th>Read</th>
     </tr>
     </thead>
-    <tbody>
-    <tr *ngFor="let book of books">
+    <tbody *ngFor="let book of books">
+    <tr *ngIf="!book.read">
       <td class="hidden">{{book.id}}</td>
       <td>{{book.name}}</td>
+      <td>Chua Doc</td>
     </tr>
     </tbody>
   </table>

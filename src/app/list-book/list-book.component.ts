@@ -14,7 +14,7 @@ export class ListBookComponent implements OnInit {
   constructor(private router: Router, private bookService: BookService) { }
 
   ngOnInit() {
-    this.bookService.getUsers().subscribe(data => { this.books = data; });
+    this.bookService.getBooks().subscribe(data => { this.books = data; });
   }
 
 }

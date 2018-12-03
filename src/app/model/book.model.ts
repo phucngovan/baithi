@@ -1,5 +1,5 @@
 export interface Book {
-  id: number;
-  name: string;
+  id: Number;
+  name: String;
   read: boolean;
 }

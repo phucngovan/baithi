@@ -9,11 +9,11 @@ export class BookService {
 
   constructor(private http: HttpClient) { }
   private baseUrl = 'http://localhost:8081/books';
-  public getUsers() {
+  public getBooks() {
     return this.http.get<Book[]>(this.baseUrl);
   }
 
-  public getUserById(id: String) {
+  public getBookById(id: Number) {
     return this.http.get<Book>(this.baseUrl + '/' + id);
   }
 
