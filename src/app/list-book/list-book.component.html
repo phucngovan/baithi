@@ -1,0 +1,26 @@
+<div class="col-md-6">
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th class="hidden">ID</th>
+      <th>Name</th>
+      <th>Read</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let book of books">
+      <td class="hidden">{{book.id}}</td>
+      <td>{{book.name}}</td>
+      <td>{{book.read}}</td>
+      <td>
+        <div *ngIf="book.read === true">
+          <button (click)="books(i)">Readed</button>
+        </div>
+        <div *ngIf="book.read === false">
+          <button (click)="books(i)">UnRead</button>
+        </div>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>

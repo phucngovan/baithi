@@ -1,0 +1,16 @@
+<div class="col-md-6">
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th class="hidden">ID</th>
+      <th>Name</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let book of books">
+      <td class="hidden">{{book.id}}</td>
+      <td>{{book.name}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
