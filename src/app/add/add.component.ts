@@ -18,7 +18,7 @@ export class AddComponent implements OnInit {
     this.addForm = this.formBuilder.group({
       id: [],
       name: ['', Validators.required],
-      read: ['', Validators.required]
+      reader: ['', Validators.required]
     });
   }
   onSubmit() {

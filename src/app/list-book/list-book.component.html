@@ -4,14 +4,18 @@
     <tr>
       <th class="hidden">ID</th>
       <th>Name</th>
-      <th>Read</th>
+      <th>Reader</th>
+      <th>Delete</th>
+      <th>Edit</th>
     </tr>
     </thead>
     <tbody>
     <tr *ngFor="let book of books">
       <td class="hidden">{{book.id}}</td>
       <td>{{book.name}}</td>
-      <td>{{book.read}}</td>
+      <td>{{book.reader}}</td>
+      <td><button class="btn btn-danger" (click)="deleteBook(book)">Delete</button></td>
+      <td><button class="btn btn-danger" (click)="editBook(book)" style="background: blue">Edit</button></td>
     </tr>
     </tbody>
   </table>

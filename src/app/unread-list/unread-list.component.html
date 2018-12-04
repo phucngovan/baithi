@@ -4,11 +4,11 @@
     <tr>
       <th class="hidden">ID</th>
       <th>Name</th>
-      <th>Read</th>
+      <th>Reader</th>
     </tr>
     </thead>
     <tbody *ngFor="let book of books">
-    <tr *ngIf="!book.read">
+    <tr *ngIf="!book.reader">
       <td class="hidden">{{book.id}}</td>
       <td>{{book.name}}</td>
       <td>Chua Doc</td>

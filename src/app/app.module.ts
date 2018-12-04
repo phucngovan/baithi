@@ -9,13 +9,15 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import {BookService} from './book.service';
 import { UnreadListComponent } from './unread-list/unread-list.component';
+import { EditComponent } from './edit/edit.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AddComponent,
     ListBookComponent,
-    UnreadListComponent
+    UnreadListComponent,
+    EditComponent
   ],
   imports: [
     BrowserModule,

@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import {ListBookComponent} from './list-book/list-book.component';
 import {AddComponent} from './add/add.component';
 import {UnreadListComponent} from './unread-list/unread-list.component';
+import {EditComponent} from './edit/edit.component';
 
 const routes: Routes = [
   {
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path: 'add-book',
     component:  AddComponent
+  },
+  {
+    path: 'edit-book',
+    component: EditComponent
   }
 ];
 

@@ -16,5 +16,16 @@ export class ListBookComponent implements OnInit {
   ngOnInit() {
     this.bookService.getBooks().subscribe(data => { this.books = data; });
   }
+  deleteBook(book: Book): void {
+    this.bookService.deleteBook(book)
+      .subscribe( data => {
+        this.books = this.books.filter(u => u !== book);
+      });
+  }
+  editBook(book: Book): void {
+    localStorage.removeItem('editBookId');
+    localStorage.setItem('editBookId', book.id.toString());
+    this.router.navigate(['edit-user']);
+  }
 
 }
