@@ -1,6 +1,6 @@
 <div class="col-md-6">
   <h2 class="text-center">Edit Book</h2>
-  <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+  <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
     <div class="form-group">
       <label for="name">Name:</label>
       <input formControlName="name" placeholder="Name" name="name" class="form-control" id="name">
@@ -11,6 +11,6 @@
       <input formControlName="reader" placeholder="Reader" name="reader" class="form-control" id="reader">
     </div>
 
-    <button class="btn btn-success">Edit</button>
+    <button class="btn btn-success">Save</button>
   </form>
 </div>

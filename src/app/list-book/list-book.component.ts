@@ -25,7 +25,7 @@ export class ListBookComponent implements OnInit {
   editBook(book: Book): void {
     localStorage.removeItem('editBookId');
     localStorage.setItem('editBookId', book.id.toString());
-    this.router.navigate(['edit-user']);
+    this.router.navigate(['edit-book']);
   }
 
 }
