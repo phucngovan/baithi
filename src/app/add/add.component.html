@@ -1,22 +1,16 @@
 <div class="col-md-6">
   <h2 class="text-center">Add</h2>
   <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
-    <div *ngIf="addForm.get('name').invalid && addForm.get('name').touched" style="color: red">
-      Title is required and min length is 5
-    </div>
     <div class="form-group">
       <label for="name">Name:</label>
       <input formControlName="name" placeholder="Name" name="name" class="form-control" id="name">
-    </div>
-    <div *ngIf="addForm.get('reader').invalid && addForm.get('reader').touched" style="color: red">
-      false or true......
     </div>
     <div class="form-group">
       <label for="reader">Reader:</label>
       <input formControlName="reader" placeholder="Reader" name="reader" class="form-control" id="reader">
     </div>
 
-    <button class="btn btn-success">Add</button>
+    <button class="btn btn-success" >Add</button>
   </form>
 </div>
 

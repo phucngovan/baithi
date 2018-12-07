@@ -14,18 +14,19 @@ export class AddComponent implements OnInit {
   addForm: FormGroup;
 
   ngOnInit() {
-
     this.addForm = this.formBuilder.group({
       id: [],
-      name: ['', [Validators.required, Validators.minLength(10)]],
-      reader: ['', [Validators.required, Validators.nullValidator]]
+      name: ['', Validators.required ],
+      reader: ['', Validators.required]
     });
   }
   onSubmit() {
     this.bookService.addBook(this.addForm.value)
       .subscribe( data => {
-        this.router.navigate(['list-book']);
+        this.router.navigate(['list-book']).then(function () {
+            return alert('phucho');
+          }
+        );
       });
   }
-
 }
